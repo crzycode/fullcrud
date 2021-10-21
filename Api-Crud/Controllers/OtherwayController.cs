@@ -12,28 +12,28 @@ namespace Api_Crud.Controllers
     {
         // GET: Otherway
         ApiContext db = new ApiContext();
-        public string Post(user u)
+        public string Post(userdata u)
         {
-            db.users.Add(u);
+            db.userdatas.Add(u);
             db.SaveChanges();
             return "product Added";
         }
         public JsonResult Get()
         {
-            var data = JsonConvert.SerializeObject(db.users.ToList());
+            var data = JsonConvert.SerializeObject(db.userdatas.ToList());
             return Json(data, JsonRequestBehavior.AllowGet);
         }
         
         public JsonResult find(int id)
         {
-            user user = db.users.Find(id);
+            userdata userdata = db.userdatas.Find(id);
 
-            var data = JsonConvert.SerializeObject(user);
+            var data = JsonConvert.SerializeObject(userdata);
             return Json(data, JsonRequestBehavior.AllowGet);
         }
-        public string Put(int id, user u)
+        public string Put(int id, userdata u)
         {
-            var dbs = db.users.Find(id);
+            var dbs = db.userdatas.Find(id);
             dbs.firstname = u.firstname;
             dbs.lastname = u.lastname;
             db.Entry(dbs).State = System.Data.Entity.EntityState.Modified;
@@ -42,8 +42,8 @@ namespace Api_Crud.Controllers
         }
         public string Delete(int id)
         {
-            user user = db.users.Find(id);
-            db.users.Remove(user);
+            userdata userdata = db.userdatas.Find(id);
+            db.userdatas.Remove(userdata);
             db.SaveChanges();
             return "deleted";
         }

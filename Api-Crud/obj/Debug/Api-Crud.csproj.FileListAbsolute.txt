@@ -89,3 +89,4 @@ D:\net app\Api-Crud\Api-Crud\obj\Debug\Api-Crud.dll
 D:\net app\Api-Crud\Api-Crud\obj\Debug\Api-Crud.pdb
 D:\net app\Api-Crud\Api-Crud\obj\Debug\Api_Crud.Migrations.mangal.resources
 D:\net app\Api-Crud\Api-Crud\obj\Debug\Api-Crud.csproj.GenerateResource.cache
+D:\net app\Api-Crud\Api-Crud\obj\Debug\Api_Crud.Migrations.mangal1.resources
