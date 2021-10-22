@@ -20,7 +20,7 @@ namespace Api_Crud.Controllers
         }
         public JsonResult Get()
         {
-            var data = JsonConvert.SerializeObject(db.userdatas.ToList());
+            var data = db.userdatas.ToList();
             return Json(data, JsonRequestBehavior.AllowGet);
         }
         
